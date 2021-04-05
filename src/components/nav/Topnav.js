@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from "../../images/logo.png";
+import LogoSmall from "../../images/logosmall.png";
 import { Drawer } from "antd";
 import { useHistory } from "react-router-dom";
 import Cart from "../../images/icons/shopping-cart.svg";
@@ -161,7 +162,8 @@ const Topnav = () => {
       >
         <h6 className="menu-title">
           {" "}
-          <img src={Logo} width="40px" height="40px" alt="logo" /> Cakewaale
+          <img src={LogoSmall} width="40px" height="40px" alt="logo" />{" "}
+          WordOkart
         </h6>
         {customer && customer.token && (
           <h6 className="text-center">

@@ -49,7 +49,6 @@ const ProductDetails = () => {
       setLoading(true);
       getBookById(slug)
         .then((res) => {
-          console.log("Book", res.data);
           setLoading(false);
           if (res.data.success === "1") {
             setBook(res.data.book);

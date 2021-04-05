@@ -413,14 +413,14 @@ nav ul li a,
     text-align: center;
   }
 }
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .site-footer {
     display: none;
   }
   .space {
     height: 50px;
   }
-}
+} */
 @media (min-width: 450px) {
   .space {
     display: none;

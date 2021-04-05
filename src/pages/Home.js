@@ -36,7 +36,7 @@ const Home = ({ token, history }) => {
   return (
     <>
       {" "}
-      <h2 className="section-title">Browse by Genres</h2>
+      <h2 className="section-title">Browse all books</h2>
       <div className="conatiner-fluid">
         <div className="row section-row">
           {books.map((item) => (
