@@ -12,7 +12,6 @@ const Home = ({ token, history }) => {
     getGenres()
       .then((res) => {
         if (res.data.success === "1") {
-          console.log("Genres", res.data);
           setGenres(res.data.genres);
         }
       })
@@ -21,7 +20,6 @@ const Home = ({ token, history }) => {
   useEffect(() => {
     getAuthors().then((res) => {
       if (res.data.success === "1") {
-        console.log("Authors", res.data);
         setAuthors(res.data.authors);
       }
     });
@@ -30,7 +28,6 @@ const Home = ({ token, history }) => {
     getBooks()
       .then((res) => {
         if (res.data.success === "1") {
-          console.log("Genres", res.data);
           setBooks(res.data.books);
         }
       })

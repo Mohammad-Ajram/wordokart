@@ -1,19 +1,17 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LoadingCard from "../components/cards/LoadingCard";
-import { getBookById, getProductsByCategory } from "../functions/index";
-
-import ProductCard from "../components/cards/ProductCard";
+import { getBookById } from "../functions/index";
 
 import { Modal } from "antd";
 
-const ProductDetails = ({ history }) => {
+const ProductDetails = () => {
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState({});
   const [discountedPrice, setDiscountedPrice] = useState(0);
   const [price, setPrice] = useState(0);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [discount, setDiscount] = useState("");
+  //   const [discount, setDiscount] = useState("");
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -58,12 +56,12 @@ const ProductDetails = ({ history }) => {
 
             setDiscountedPrice(res.data.book.discounted_price);
             setPrice(res.data.book.price);
-            setDiscount(
-              Math.round(
-                100 -
-                  (res.data.book.discounted_price / res.data.book.price) * 100
-              )
-            );
+            // setDiscount(
+            //   Math.round(
+            //     100 -
+            //       (res.data.book.discounted_price / res.data.book.price) * 100
+            //   )
+            // );
           }
         })
         .catch((err) => {

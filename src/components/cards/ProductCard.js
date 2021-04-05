@@ -1,8 +1,5 @@
 import Heart from "../../images/icons/heartBold.svg";
-import HeartFilled from "../../images/icons/heartFilled.svg";
 import { useHistory } from "react-router-dom";
-
-import { useSelector, useDispatch } from "react-redux";
 
 const ProductCard = ({
   name,
@@ -14,10 +11,6 @@ const ProductCard = ({
   author,
 }) => {
   const history = useHistory();
-
-  const { customer } = useSelector((state) => ({ ...state }));
-
-  const dispatch = useDispatch();
 
   const goToProductDetails = () => {
     history.push(`/product-details/${id}`);

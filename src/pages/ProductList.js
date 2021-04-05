@@ -9,8 +9,7 @@ const ProductList = () => {
   const [loading, setLoading] = useState(false);
 
   let { slug, q } = useParams();
-  console.log("Slug", slug);
-  console.log("q", typeof q);
+
   useEffect(() => {
     const loadBooks = () => {
       setLoading(true);
@@ -20,7 +19,6 @@ const ProductList = () => {
             setLoading(false);
             if (res.data.success === "1") {
               setBooks(res.data.books);
-              console.log("books", res.data);
             }
           })
           .catch((err) => {
@@ -33,7 +31,6 @@ const ProductList = () => {
             setLoading(false);
             if (res.data.success === "1") {
               setBooks(res.data.books);
-              console.log("books", res.data);
             }
           })
           .catch((err) => {
@@ -42,7 +39,7 @@ const ProductList = () => {
           });
     };
     loadBooks();
-  }, [slug]);
+  }, [slug, q]);
 
   return (
     <>
