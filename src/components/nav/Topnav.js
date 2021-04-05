@@ -60,7 +60,7 @@ const Topnav = () => {
             {" "}
             <input
               type="text"
-              placeholder="Search for cakes"
+              placeholder="Search for books, authors, etc."
               className="search-input"
             />
           </form>
